@@ -64,7 +64,7 @@
 
 
 
-# Một số lỗi có thể gặp
+# ============ Một số lỗi có thể gặp ======================
 
 ## không cái được package
   [Link fix](https://unix.stackexchange.com/questions/336392/e-unable-to-locate-package-vim-on-debian-jessie-simplified-docker-container)
