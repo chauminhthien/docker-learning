@@ -10,10 +10,11 @@
   `docker search {ten_tim_kiem}`
 
 ## Cách run image
-  `docker run -it {name/id_iamge}` \n
+```
+  `docker run -it {name/id_iamge}`
   `docker run --name {container_name} -p {host_port}:{container_port} -v {/host_path}:{/container_path} -it {image_name} /bin/bash` \n
   `docker run -it --name {Container name} -h {hostname} {images}` \n
-
+```
 ## Liệt kê các container đang chạy
   `docker ps`
 
