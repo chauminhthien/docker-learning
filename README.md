@@ -14,6 +14,8 @@
   `docker run -it {name/id_iamge}`
   `docker run --name {container_name} -p {host_port}:{container_port} -v {/host_path}:{/container_path} -it {image_name} /bin/bash`
   `docker run -it --name {Container name} -h {hostname} {images}`
+
+  docker run -it --network {name net work}
 ```
 ## Liệt kê các container đang chạy
   `docker ps`
@@ -73,8 +75,11 @@
 ## Tạo volume cho docker
   `docker volume create {name}`
 
+## Kiểm tra thông số volume
+  `docker volume inspect {name}`
+
 ## Tạo volume cho docker ánh xa5 tới thư mục máy host
-  `docker volume create --opt decive={path máy host} --opt type=none --opt o=bind {name volume}`
+  `docker volume create --opt devive={path máy host} --opt type=none --opt o=bind {name volume}`
 
 ## Xoá volume
 `docker volume rm -f {name}`
@@ -82,6 +87,31 @@
 
 ## Gán volume khi run docker
 `docker run -it --mount source={name volume},taget={path tren images} {name image}`
+
+
+## Xem danh sách network trong docker
+`docker network ls`
+
+## Xem chi tiết network trong docker
+```
+  docker network inspect {name network}
+  `Containers` chính là danh sách các container connet tới
+  networt `bridge` mặt định được connect khi run image
+```
+
+
+## Xem container đang connet tới network nào
+  `docker inspect {name container}`
+
+
+## Tạo mới một network
+  `docker network create --driver {name driver network} {name network new}`
+
+## Xoá network
+`docker network rm {name}`
+
+
+
 
 # ==== Một số lỗi có thể gặp ====
 
