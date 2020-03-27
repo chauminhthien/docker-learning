@@ -108,7 +108,20 @@
   `docker network create --driver {name driver network} {name network new}`
 
 ## Xoá network
-`docker network rm {name}`
+  `docker network rm {name}`
+
+## Kiêm tra lich sử của image
+  `docker images history {id/name image}`
+
+## Kiêm tra log container
+  `docker logs {name container}`
+
+## Kiêm tra log container và theo dõi
+  `docker logs -f {name container}`
+
+
+
+
 
 
 
