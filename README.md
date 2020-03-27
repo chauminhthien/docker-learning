@@ -61,8 +61,27 @@
 ## Sửa name và tag image
   `docker tag {id} {newName:newTag}`
 
+## Cách chia sẽ thư muc máy host với container
+  `docker run -it -v {path máy host}:{path container}`
+
+## Cách chia sẽ thư mục từ container đang chay
+  `docker run -it --volumes-form {name container đang chay} {name image}`
+
+## Xem volume có trong docker
+  `docker volume ls`
+
+## Tạo volume cho docker
+  `docker volume create {name}`
+
+## Tạo volume cho docker ánh xa5 tới thư mục máy host
+  `docker volume create --opt decive={path máy host} --opt type=none --opt o=bind {name volume}`
+
+## Xoá volume
+`docker volume rm -f {name}`
 
 
+## Gán volume khi run docker
+`docker run -it --mount source={name volume},taget={path tren images} {name image}`
 
 # ==== Một số lỗi có thể gặp ====
 
